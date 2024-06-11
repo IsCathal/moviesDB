@@ -22,7 +22,9 @@ user_input_number = gets.to_i
       movieDataBase.display_movie_titles
       puts
     when 2
-
+      puts  "Enter the index of the movie you want to view"
+      id = gets.to_i
+      movieDataBase.get_movie_info(id)
     when 3
 
     else

@@ -21,6 +21,20 @@ class MovieDataBase
 		end
   end
 
+  def get_movie_info(id)
+
+    @database.each_with_index do |movie, index| 
+      if id == index
+        puts "#{movie.title}"
+        puts "#{movie.director}"
+        puts "#{movie.release_year}"
+        puts "#{movie.genres}"
+      end
+
+    end
+  end
+
+
   def add_json_to_database
     file_content = File.read('movies.json')
     json_data = JSON.parse(file_content)
