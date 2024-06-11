@@ -19,8 +19,8 @@ user_input_number = gets.to_i
   while user_input_number != 4
     case user_input_number
     when 1
-
-
+      movieDataBase.display_movie_titles
+      puts
     when 2
 
     when 3

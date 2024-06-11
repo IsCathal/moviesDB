@@ -13,6 +13,14 @@ class MovieDataBase
 		@database << movie
 	end
 
+
+  def display_movie_titles
+    puts "Movies available:"
+		@database.each_with_index do |movie, index| 
+			puts "#{index + 1}. #{movie.title}"
+		end
+  end
+
   def add_json_to_database
     file_content = File.read('movies.json')
     json_data = JSON.parse(file_content)
