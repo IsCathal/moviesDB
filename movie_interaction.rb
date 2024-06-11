@@ -1,5 +1,11 @@
+require 'json'
+require_relative "movie"
+require_relative "movie_database"
 
 
+movieDataBase = MovieDataBase.new
+movieDataBase.add_json_to_database
+p movieDataBase.database
 
 puts "Movie API Interaction 
 1. View all movies 
