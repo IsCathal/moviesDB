@@ -26,6 +26,15 @@ user_input_number = gets.to_i
       id = gets.to_i
       movieDataBase.get_movie_info(id)
     when 3
+      puts  "Enter title"
+      title = gets.chomp
+      puts  "Enter director"
+      director = gets.chomp
+      puts  "Enter Year"
+      year = gets.to_i
+      puts  "Enter Just one genre"
+      genre = gets.to_i
+      movieDataBase.user_added_movie(title, director, year, genre)
 
     else
       puts  "Error, Please enter Number between 1 and 7"

@@ -34,6 +34,12 @@ class MovieDataBase
     end
   end
 
+  def user_added_movie(title, director, year, genre)
+  
+    add_to_storage(Movie.new(title, director, year, genre))
+    
+  end
+
 
   def add_json_to_database
     file_content = File.read('movies.json')
